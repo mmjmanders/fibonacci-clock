@@ -2,6 +2,10 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import appleTouchIcon from '$lib/assets/apple-touch-icon-180x180.png';
+	import '@fontsource-variable/open-sans';
+	import '@fontsource-variable/fira-code';
+	import '@fontsource-variable/material-symbols-outlined';
+	import iconFont from '@fontsource-variable/material-symbols-outlined/files/material-symbols-outlined-latin-full-normal.woff2?url';
 	import { pwaInfo } from 'virtual:pwa-info';
 
 	let { children } = $props();
@@ -11,6 +15,7 @@
 <svelte:head>
 	<link rel="icon" href={favicon} type="image/svg+xml" />
 	<link rel="apple-touch-icon" href={appleTouchIcon} />
+	<link rel="preload" href={iconFont} as="font" type="font/woff2" crossorigin="anonymous" />
 	{#if manifest}
 		<link rel="manifest" href={manifest} />
 	{/if}

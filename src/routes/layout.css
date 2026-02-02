@@ -1,1 +1,7 @@
 @import 'tailwindcss';
+
+@theme {
+	--font-sans: 'Open Sans Variable', sans-serif;
+	--font-mono: 'Fira Code Variable', monospace;
+	--font-icon: 'Material Symbols Outlined Variable', sans-serif;
+}

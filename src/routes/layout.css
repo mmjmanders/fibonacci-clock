@@ -1,8 +1,7 @@
 @import 'tailwindcss';
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=star&display=block');
 
 @theme {
 	--font-sans: 'Open Sans Variable', sans-serif;
 	--font-mono: 'Fira Code Variable', monospace;
-	--font-icon: 'Material Symbols Outlined';
+	--font-icon: 'Material Symbols Outlined Variable', sans-serif;
 }

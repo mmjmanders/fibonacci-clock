@@ -4,6 +4,7 @@
 	import appleTouchIcon from '$lib/assets/apple-touch-icon-180x180.png';
 	import '@fontsource-variable/open-sans';
 	import '@fontsource-variable/fira-code';
+	import '@fontsource-variable/material-symbols-outlined';
 	import { pwaInfo } from 'virtual:pwa-info';
 
 	let { children } = $props();

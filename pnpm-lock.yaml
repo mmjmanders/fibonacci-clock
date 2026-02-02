@@ -11,6 +11,9 @@ importers:
       '@fontsource-variable/fira-code':
         specifier: ^5.2.7
         version: 5.2.7
+      '@fontsource-variable/material-symbols-outlined':
+        specifier: ^5.2.33
+        version: 5.2.33
       '@fontsource-variable/open-sans':
         specifier: ^5.2.7
         version: 5.2.7
@@ -806,6 +809,9 @@ packages:
 
   '@fontsource-variable/fira-code@5.2.7':
     resolution: {integrity: sha512-J2bxN7fz5rd8WpQYyau4o19WqTzxoTqaNj9jhsv4p21GSu1Rf34tbqsxqjyDCR+wDMHM3SajyFqtq+5uvRUQ7w==}
+
+  '@fontsource-variable/material-symbols-outlined@5.2.33':
+    resolution: {integrity: sha512-pGEtkwxGD6h2PI7rd5ljWS4CK9Vi35PooPOAVDwKpzq4Yj5CjAJjPRxJ9+kwJqsjexUJbmwvK3mbAhvJdErwvQ==}
 
   '@fontsource-variable/open-sans@5.2.7':
     resolution: {integrity: sha512-wzCLm2STuekK9Fz58DiuBnk4GgJpvvVtAU85a4b06ACNG/UsVjQcCvkUd6R/ETlHfsaykCUZamLRvSXg4KtWuA==}
@@ -3791,6 +3797,8 @@ snapshots:
       levn: 0.4.1
 
   '@fontsource-variable/fira-code@5.2.7': {}
+
+  '@fontsource-variable/material-symbols-outlined@5.2.33': {}
 
   '@fontsource-variable/open-sans@5.2.7': {}
 

@@ -5,3 +5,9 @@
 	--font-mono: 'Fira Code Variable', monospace;
 	--font-icon: 'Material Symbols Outlined Variable', sans-serif;
 }
+
+@layer components {
+	main {
+		@apply mx-auto w-1/2;
+	}
+}

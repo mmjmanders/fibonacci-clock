@@ -35,5 +35,11 @@ export default defineConfig(
 				svelteConfig
 			}
 		}
+	},
+	{
+		rules: {
+			'no-console': ['error', { allow: ['warn', 'error'] }],
+			'@typescript-eslint/no-unused-vars': 'warn'
+		}
 	}
 );

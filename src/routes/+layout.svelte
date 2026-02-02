@@ -2,6 +2,8 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import appleTouchIcon from '$lib/assets/apple-touch-icon-180x180.png';
+	import '@fontsource-variable/open-sans';
+	import '@fontsource-variable/fira-code';
 	import { pwaInfo } from 'virtual:pwa-info';
 
 	let { children } = $props();

@@ -11,7 +11,35 @@ export default defineConfig({
 			devOptions: {
 				enabled: true
 			},
-			registerType: 'autoUpdate'
+			registerType: 'autoUpdate',
+			manifest: {
+				name: 'Fibonacci Clock',
+				short_name: 'Fibonacci Clock',
+				display: 'standalone',
+				icons: [
+					{
+						src: 'pwa-64x64.png',
+						sizes: '64x64',
+						type: 'image/png'
+					},
+					{
+						src: 'pwa-192x192.png',
+						sizes: '192x192',
+						type: 'image/png'
+					},
+					{
+						src: 'pwa-512x512.png',
+						sizes: '512x512',
+						type: 'image/png'
+					},
+					{
+						src: 'maskable-icon-512x512.png',
+						sizes: '512x512',
+						type: 'image/png',
+						purpose: 'maskable'
+					}
+				]
+			}
 		})
 	]
 });

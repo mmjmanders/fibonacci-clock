@@ -1,7 +1,5 @@
 <script lang="ts">
-	import AppComponent from '$lib/components/AppComponent.svelte';
+	import Clock from '$lib/components/Clock.svelte';
 </script>
 
-<main>
-	<AppComponent />
-</main>
+<Clock />

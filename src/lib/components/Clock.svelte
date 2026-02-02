@@ -9,4 +9,4 @@
 	});
 </script>
 
-<div class="font-mono">{time.toISOString()}</div>
+<div class="font-mono">{String(time.getSeconds()).padStart(2, '0')}</div>

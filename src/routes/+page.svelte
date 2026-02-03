@@ -14,7 +14,7 @@
 	const formattedTime = $derived<string>(dayjs(time).format('HH:mm:ss'));
 </script>
 
-<div class="flex flex-col items-center gap-4">
+<div class="mt-4 flex flex-col items-center gap-4">
 	<Clock {time} />
 	<div class="font-mono text-2xl">{formattedTime}</div>
 </div>

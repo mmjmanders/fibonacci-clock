@@ -2,7 +2,7 @@
 	import type { SquareProps } from '$lib/types';
 	const numbers: ReadonlyArray<number> = [5, 3, 2, 1, 1];
 
-	const { hours, minutes, index, x, y, width, height }: SquareProps = $props();
+	const { x, y, width, height, hours, minutes, index, strokeWidth }: SquareProps = $props();
 
 	const isOn = (target: number, currentIndex: number) => {
 		let acc = target;
@@ -30,6 +30,6 @@
 	{y}
 	{width}
 	{height}
-	stroke-width="2"
+	stroke-width={strokeWidth}
 	class="{color} stroke-neutral-950 dark:stroke-neutral-50"
 />

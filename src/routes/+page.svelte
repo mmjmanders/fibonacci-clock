@@ -16,5 +16,5 @@
 
 <div class="mt-4 flex flex-col items-center gap-4">
 	<Clock {time} />
-	<div class="font-mono text-2xl">{formattedTime}</div>
+	<div class="text-2xl">{formattedTime}</div>
 </div>

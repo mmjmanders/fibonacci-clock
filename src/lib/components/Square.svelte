@@ -4,22 +4,25 @@
 
 	const { hours, minutes, index, x, y, width, height }: SquareProps = $props();
 
-	const isHourOn: () => boolean = () => {
-		const indices: number[] = [];
-		numbers.reduce((acc, curr, i) => {
-			if (acc - curr > 0) {
-				acc -= curr;
-				indices.push(i);
+	const isOn = (target: number, currentIndex: number) => {
+		let acc = target;
+		for (let i = 0; i < numbers.length; i++) {
+			if (acc >= numbers[i]) {
+				if (i === currentIndex) return true;
+				acc -= numbers[i];
 			}
-			return acc;
-		}, hours);
-		return indices.includes(index);
+		}
+		return false;
 	};
 
-	const color: () => string = () => {
-		if (isHourOn()) return 'fill-amber-400';
+	const color = $derived.by<string>(() => {
+		const hourOn = isOn(hours, index);
+		const minuteOn = isOn(minutes, index);
+		if (hourOn && minuteOn) return 'fill-blue-500';
+		else if (hourOn) return 'fill-red-500';
+		else if (minuteOn) return 'fill-green-500';
 		return 'fill-zinc-200';
-	};
+	});
 </script>
 
 <rect

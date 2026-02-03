@@ -1,12 +1,17 @@
 <script lang="ts">
-	let time = $state<Date>(new Date());
+	import Square from './Square.svelte';
+	import type { ClockProps } from '$lib/types';
 
-	$effect(() => {
-		const interval = setInterval(() => {
-			time = new Date();
-		}, 1000);
-		return () => clearInterval(interval);
-	});
+	const { time }: ClockProps = $props();
+
+	const hours = $derived(time.getHours() % 12 || 12);
+	const minutes = $derived(Math.floor(time.getMinutes() / 5));
 </script>
 
-<div class="font-mono">{String(time.getSeconds()).padStart(2, '0')}</div>
+<svg viewBox="0 0 800 500" class="overflow-visible">
+	<Square x={300} y={0} width={500} height={500} {hours} {minutes} index={0} />
+	<Square x={0} y={200} width={300} height={300} {hours} {minutes} index={1} />
+	<Square x={0} y={0} width={200} height={200} {hours} {minutes} index={2} />
+	<Square x={200} y={0} width={100} height={100} {hours} {minutes} index={3} />
+	<Square x={200} y={100} width={100} height={100} {hours} {minutes} index={4} />
+</svg>

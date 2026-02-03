@@ -6,8 +6,12 @@
 	--font-icon: 'Material Symbols Outlined Variable', sans-serif;
 }
 
-@layer components {
+@layer base {
+	body {
+		@apply bg-slate-50 dark:bg-slate-950;
+	}
+
 	main {
-		@apply mx-auto w-1/2;
+		@apply mx-auto w-full max-w-5xl;
 	}
 }

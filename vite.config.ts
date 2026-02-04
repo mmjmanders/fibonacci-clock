@@ -20,6 +20,7 @@ export default defineConfig(({ command }) => ({
 			},
 			registerType: 'autoUpdate',
 			strategies: 'generateSW',
+			injectRegister: 'inline',
 			manifest: {
 				name: 'Fibonacci Clock',
 				short_name: 'Fibonacci Clock',

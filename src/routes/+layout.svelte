@@ -9,6 +9,7 @@
 
 	let { children } = $props();
 	const manifest = $derived(pwaInfo?.webManifest?.href);
+	const registerSW = $derived(pwaInfo?.registerSW?.scriptTag);
 </script>
 
 <svelte:head>
@@ -16,6 +17,9 @@
 	<link rel="apple-touch-icon" href={appleTouchIcon} />
 	{#if manifest}
 		<link rel="manifest" href={manifest} />
+	{/if}
+	{#if registerSW}
+		{@html registerSW}
 	{/if}
 </svelte:head>
 

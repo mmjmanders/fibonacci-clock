@@ -3,7 +3,14 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import { SvelteKitPWA } from '@vite-pwa/sveltekit';
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+	...(command === 'serve'
+		? {
+				server: {
+					host: true
+				}
+			}
+		: {}),
 	plugins: [
 		tailwindcss(),
 		sveltekit(),
@@ -42,4 +49,4 @@ export default defineConfig({
 			}
 		})
 	]
-});
+}));

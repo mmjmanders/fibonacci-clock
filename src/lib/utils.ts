@@ -1,6 +1,6 @@
 export const fibonacciBreakdown: (target: number) => number[] = (target) => {
-	const fibs: ReadonlyArray<number> = [1, 1, 2, 3, 5];
-	const result: number[] = [];
+	const fibs: ReadonlyArray<number> = [5, 3, 2, 1, 1];
+	const result: number[] = new Array(fibs.length).fill(0);
 
 	const backtrack: (remaining: number, index: number) => boolean = (remaining, index) => {
 		if (remaining === 0) return true;
@@ -8,11 +8,11 @@ export const fibonacciBreakdown: (target: number) => number[] = (target) => {
 		for (let i = index; i >= 0; i--) {
 			const current = fibs[i];
 			if (current <= remaining) {
-				result.push(current);
+				result[i] = current;
 
 				if (backtrack(remaining - current, i - 1)) return true;
 
-				result.pop();
+				result[i] = 0;
 			}
 		}
 		return false;

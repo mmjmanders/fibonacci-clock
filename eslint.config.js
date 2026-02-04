@@ -39,7 +39,8 @@ export default defineConfig(
 	{
 		rules: {
 			'no-console': ['error', { allow: ['warn', 'error'] }],
-			'@typescript-eslint/no-unused-vars': 'warn'
+			'@typescript-eslint/no-unused-vars': 'warn',
+			'svelte/no-at-html-tags': 'warn'
 		}
 	}
 );

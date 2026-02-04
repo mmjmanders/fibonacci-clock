@@ -19,6 +19,7 @@ export default defineConfig(({ command }) => ({
 				enabled: true
 			},
 			registerType: 'autoUpdate',
+			strategies: 'generateSW',
 			manifest: {
 				name: 'Fibonacci Clock',
 				short_name: 'Fibonacci Clock',

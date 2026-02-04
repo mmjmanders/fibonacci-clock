@@ -15,7 +15,7 @@
 	const formattedTime = $derived<string>(dayjs(time).format('HH:mm:ss'));
 </script>
 
-<div class="mt-4 flex flex-col items-center gap-2">
+<div class="flex flex-col items-center gap-2">
 	<Clock {time} />
 	<div class="flex items-center gap-1 text-2xl">
 		<span class="font-icon">nest_clock_farsight_analog</span>

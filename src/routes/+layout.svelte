@@ -8,7 +8,7 @@
 	import { pwaInfo } from 'virtual:pwa-info';
 
 	let { children } = $props();
-	const manifest = $derived(pwaInfo?.webManifest?.href);
+	const manifest = $derived(pwaInfo?.webManifest?.linkTag);
 	const registerSW = $derived(pwaInfo?.registerSW?.scriptTag);
 </script>
 
@@ -16,7 +16,7 @@
 	<link rel="icon" href={favicon} type="image/svg+xml" />
 	<link rel="apple-touch-icon" href={appleTouchIcon} />
 	{#if manifest}
-		<link rel="manifest" href={manifest} />
+		{@html manifest}
 	{/if}
 	{#if registerSW}
 		{@html registerSW}

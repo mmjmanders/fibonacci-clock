@@ -18,11 +18,15 @@
 <div class="flex flex-col items-center gap-2">
 	<Clock {time} />
 	<div class="flex items-center gap-1 text-2xl">
-		<span class="font-icon">nest_clock_farsight_analog</span>
 		{formattedTime}
 	</div>
 	<div class="flex items-center gap-1 text-sm">
-		<span class="font-icon">commit</span>
-		<span class="font-mono">{PUBLIC_COMMIT_SHA}</span>
+		<span class="font-icon">deployed_code</span>
+		<a
+			target="_blank"
+			rel="noopener"
+			href="https://github.com/mmjmanders/fibonacci-clock/commit/{PUBLIC_COMMIT_SHA}"
+			>{PUBLIC_COMMIT_SHA}</a
+		>
 	</div>
 </div>

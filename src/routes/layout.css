@@ -14,4 +14,8 @@
 	main {
 		@apply mx-auto w-full max-w-5xl p-4;
 	}
+
+	a[href]:hover {
+		text-decoration: underline;
+	}
 }

@@ -12,6 +12,6 @@
 	}
 
 	main {
-		@apply mx-auto w-full max-w-5xl;
+		@apply mx-auto w-full max-w-5xl p-4;
 	}
 }
